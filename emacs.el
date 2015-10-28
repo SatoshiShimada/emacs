@@ -1,4 +1,7 @@
 
+;; set using shell
+(setq shell-file-name "/bin/bash")
+
 ;; not show startup message
 (setq inhibit-startup-message t)
 
