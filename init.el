@@ -1,3 +1,5 @@
+;; Emacs setting file
+;; for Emacs25
 
 ;; add load path
 (add-to-list 'load-path "~/.emacs.d/lisp/")
@@ -31,7 +33,6 @@
       (require 'anything-auto-install nil t))
     (when (require 'descbinds-anything nil t)
       (descbinds-anything-install))))
-
 
 ;; unvisible menubar
 (menu-bar-mode -1)
@@ -82,12 +83,12 @@
 ;; sytle of paren
 (setq show-paren-style 'expression)
 
-
 ;; not make backup file
 (setq make-backup-files nil)
 
 ;; not make auto save file
 ;(setq auto-save-default nil)
+
 ;; delete auto save file when exit
 (setq delete-auto-save-files t)
 
