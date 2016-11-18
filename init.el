@@ -32,12 +32,6 @@
     (when (require 'descbinds-anything nil t)
       (descbinds-anything-install))))
 
-;; setting for c/c++
-(defun my-c-c++-mode-conf ()
-  (c-set-style "k&r")
-  (show-paren-mode t))
-
-(add-hook 'c++-mode-hook 'my-c-c++-mode-conf)
 
 ;; unvisible menubar
 (menu-bar-mode -1)
@@ -119,11 +113,14 @@
 (when (executable-find "git")
   (require 'egg nil t))
 
+;; setting for c/c++
 ;; indent is tab as tabstop=4 into c-mode
-(add-hook 'c-mode-common-hook
-          '(lambda ()
-             (c-set-style "k&r")
-             (setq c-basic-offset 4)
-             (setq indent-tabs-mode t)
-             (setq tab-width 4)))
+(defun my-c-c++-mode-conf ()
+  (c-set-style "k&r")
+  (setq c-basic-offset 4)
+  (setq indent-tabs-mode t)
+  (setq tab-width 4)
+  (show-paren-mode t))
+
+(add-hook 'c++-mode-hook 'my-c-c++-mode-conf)
 
