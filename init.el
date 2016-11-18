@@ -34,6 +34,10 @@
     (when (require 'descbinds-anything nil t)
       (descbinds-anything-install))))
 
+;; Rectangle edit with cua-mode(Common User Access)
+(cua-mode t)
+(setq cua-enable-cua-keys nil) ; Disable cua key-bind
+
 ;; unvisible menubar
 (menu-bar-mode -1)
 
