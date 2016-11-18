@@ -32,6 +32,13 @@
     (when (require 'descbinds-anything nil t)
       (descbinds-anything-install))))
 
+;; setting for c/c++
+(defun my-c-c++-mode-conf ()
+  (c-set-style "k&r")
+  (show-paren-mode t))
+
+(add-hook 'c++-mode-hook 'my-c-c++-mode-conf)
+
 ;; unvisible menubar
 (menu-bar-mode -1)
 
